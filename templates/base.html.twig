@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="https://application-blondel.com/images/icon-512x512.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .container {
+                display: flex;
+            }
+
+            h1,
+            h2 {
+                text-align: center;
+            }
+
+            body h1 {
+                margin: 30px;
+            }
+
+            body hr {
+                margin: 50px;
+            }
+
+            form {
+                margin-top: 30px;
+            }
+
+            .trait {
+                width: 1px;
+                background-color: #aaa;
+            }
+
+            .login button {
+                margin-bottom: 200px;
+            }
+
+            .login,
+            .signin {
+                text-align: center;
+                width: 50%;
+                margin: 100px;
+            }
+
+            .forgot {
+                display: flex;
+                justify-content: center;
+            }
+
+            .forgot input,
+            .forgot button {
+                width: 150%;
+            }
+
+            .content{
+                display: flex;
+                margin-left: 35%;
+            }
+
+            .rapports {
+                width: 70%;
+                text-align: justify;
+            }
+
+            .filtres {
+                list-style-type: none;
+            }
+
+            .filtres li{
+                text-align: center;
+            }
+
+            .filtres li button {
+                width: 150px;
+                margin-bottom: 10px;
+            }
+
+            .header{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .right{
+                margin-right: 10px;
+            }
+
+            body .change{
+                width: 30%;
+                text-align: center;
+                margin-left: 35%;
+            }
+
+            .liste{
+                margin-left: 40%;
+            }
+
+            body .cf{
+                width: 500px;
+                display: flex;
+                flex-direction: column;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cf_btn{
+                width: 200px;
+                margin-left: 30%;
+            }
+
+            .space_form{
+                margin-left: 7%;
+            }
+            
+            #deploy_liste{
+                border: 1px solid grey;
+                 cursor: pointer; 
+                 border-radius: 2px; 
+                 background-color: #EFEFEF; 
+                 padding: 3px
+            }
+
+            #deploy_liste:hover{
+                background-color: #E5E5E5;
+                border: 1px solid #4F4F4F;
+            }
+
+            noscript{
+                margin-left: 30%;
+                font-size: 30px;
+                color: red;
+            }
+        </style>
+        <script>
+            document.onkeydown = function(e) {
+            if(event.keyCode == 123) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+            }
+    </script>
+    </head>
+    <body oncontextmenu="return false;">
+    <noscript>Merci de réactiver Javascript, le site ne peut fonctionner sans.</noscript>
+        {% block body %}{% endblock %}
+    </body>
+</html>

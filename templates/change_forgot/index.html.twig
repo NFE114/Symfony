@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mot de passe oublié{% endblock %}
+
+{% block body %}
+<div class="header">
+        <div style="padding: 25px;"><a href="./" style="color: black;"><i class="fa fa-home" aria-hidden="true">&nbsp&nbsp Accueil</i></a></div>
+        <h1>Mot de passe oublié</h1>
+        <div></div>
+    </div>
+    <hr>
+    <form action="" method="post" class="cf">
+        <div class="mb-3">
+        <input type="password" pattern="[a-zA-Z0-9]+" title="Les caractères spéciaux ne sont pas acceptés" class="form-control" name="new_pass" placeholder="Entrez votre nouveau mot de passe" required>
+        </div>
+        <div class="mb-3">
+        <input type="password" pattern="[a-zA-Z0-9]+" title="Les caractères spéciaux ne sont pas acceptés" class="form-control" name="cnew_pass" placeholder="Confirmez votre nouveau mot de passe" required>
+        </div>
+        <div class="mb-3">
+        <input type="submit" class="btn btn-primary cf_btn" value="Changer le mot de passe" name="change_forgot">
+        </div>
+    </form>
+{% endblock %}

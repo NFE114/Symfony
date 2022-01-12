@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mot de passe oublié{% endblock %}
+
+{% block body %}
+<div class="header">
+    <div style="padding: 25px;"><a href="./" style="color: black;"><i class="fa fa-home" aria-hidden="true">&nbsp&nbsp Accueil</i></a></div>
+    <h1>Mot de passe oublié</h1>
+    <div></div>
+</div>
+<hr>
+<div class="forgot">
+    <form action="" method="post">
+        <div class="mb-3">
+            <input type="email" class="form-control" id="forgot_email" name="forgot_email"
+                placeholder="Adresse E-Mail" required>
+        </div>
+        <button type="submit" name="forgot" class="btn btn-primary">Envoyer le mail de récupération</button>
+    </form>
+</div>
+{% endblock %}

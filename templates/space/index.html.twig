@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espace utilisateur{% endblock %}
+{% block body %}
+<div class='header'>
+        <div style='padding: 25px;'><a href='./'><i class='fa fa-home' style='color: black;' aria-hidden='true'>&nbsp&nbsp&nbspAccueil</i></a></div>
+        <h1>Espace utilisateur - Bienvenue {{ user }}</h1>
+        <div class='right' style='padding-right: 25px;'>
+            <form action='' method='post'>
+                <button type='submit' name='logout' style='border: none; background-color: transparent; margin-left: -5px'><i class='fa fa-sign-out' aria-hidden='true'>&nbsp&nbspDéconnexion</i></button><br>
+                <a type='button' href='change'><i class='fa fa-lock' aria-hidden='true' style='color: black;'>&nbsp&nbsp&nbspChanger le mot de passe</i></a>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <h2>Choisir les rapports à afficher</h2>
+    <div class='content filters'>
+        <form action='' method='post' class='space_form'>
+            <select name='vendeur' id='vendeur'>
+                <option value='' disabled selected>Vendeur</option>
+                {% for vendeur in vendeurs %}
+                        <option name='{{ vendeur.vendeur }}'>{{ vendeur.vendeur }}</option>
+                {% endfor %}
+            </select><br><br>
+            <select name='region' id='region'>
+                <option value='' disabled selected>Région</option>
+                {% for region in regions %}
+                        <option name='{{ region.region }}'>{{ region.region }}</option>
+                {% endfor %}
+            </select><br><br>
+            <input type='number' name='min_montant' id='min_montant' placeholder='Montant minimum'>
+            <input type='number' name='max_montant' id='max_montant' placeholder='Montant maximum'><br><br>
+            <input type='date' name='date' id='date' min='2000-01-01' max='2100-12-31'><br><br>
+            <input type='submit' name='filtre' value='Filtrer'>
+            <input type='submit' name='reinit' value='Réinitialiser'><br><br>
+            <input type='submit' name='liste' value='Liste complète de tous les rapports'>        
+        </form>
+        <script>if(window.history.replaceState){window.history.replaceState(null,null,window.location.href);}</script>
+    </div>
+{% endblock %}

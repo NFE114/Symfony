@@ -1,0 +1,23 @@
+index:
+   path: /
+   controller: App\Controller\IndexController::index
+
+forgot:
+   path: /forgot
+   controller: App\Controller\ForgotController::index
+
+change_forgot:
+   path: /change_forgot
+   controller: App\Controller\ChangeForgotController::index
+
+verif:
+   path: /verif
+   controller: App\Controller\VerifController::index
+
+space:
+   path: /space
+   controller: App\Controller\SpaceController::index
+
+change:
+   path: /change
+   controller: App\Controller\ChangeController::index

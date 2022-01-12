@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+    <h1>Accueil</h1>
+    <hr>
+    <div class="container">
+        <div class="login">
+            <h2>Connexion</h2>
+            <form action="" method="post">
+                <div class="mb-3">
+                <input type="email" class="form-control" id="login_email" name="login_email"
+                    placeholder="Adresse E-Mail" required>
+                </div>
+                <div class="mb-3">
+                    <input type="password" pattern="[a-zA-Z0-9]+" class="form-control" id="login_password" name="login_password"
+                        placeholder="Mot de passe" required>
+                </div>
+                <button type="submit" name="login" class="btn btn-primary">Connexion</button>
+            </form>
+            <a href="forgot">Mot de passe oublié</a>
+        </div>
+        <div class="trait"></div>
+        <div class="signin">
+            <h2>Inscription</h2>
+                <form action="" method="post">
+                    <div class="form-group mb-3"> 
+                        <input type="email" class="form-control" id="register_email" name="register_email" placeholder="E-Mail" required>
+                    </div>
+                    <div class="form-group mb-3"> 
+                        <input type="text" pattern="[a-zA-Z]+" title="Les chiffres et caractères spéciaux ne sont pas acceptés" class="form-control" id="register_nom"
+                            name="register_nom" placeholder="Nom" required>    
+                    </div>
+                    <div class="form-group mb-3"> 
+                        <input type="text" pattern="[a-zA-Z]+" title="Les chiffres et caractères spéciaux ne sont pas acceptés" class="form-control" id="register_prenom"
+                            name="register_prenom" placeholder="Prénom" required>    
+                    </div>
+                    <div class="form-group mb-3"> 
+                        <input type="password" pattern="[a-zA-Z0-9]+" title="Les caractères spéciaux ne sont pas acceptés" class="form-control"
+                            id="register_password" name="register_password" placeholder="Mot de passe" required> 
+                    </div>
+                    <div class="form-group mb-3"> 
+                        <input type="password" pattern="[a-zA-Z0-9]+" title="Les caractères spéciaux ne sont pas acceptés" class="form-control"
+                            id="register_cpassword" name="register_cpassword" placeholder="Confirmer le mot de passe" required>
+                    </div>      
+                    <button type="submit" name="register" class="btn btn-primary">
+                        S'enregistrer
+                    </button> 
+                </form> 
+        </div>
+    </div>
+    {# {{ result }} #}
+    <script>if(window.history.replaceState){window.history.replaceState(null,null,window.location.href);}</script>
+{% endblock %}
